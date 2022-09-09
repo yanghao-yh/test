@@ -182,7 +182,9 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
     headers = {
         'Content-Type': 'application/json',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
-                      'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
+                      'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+        'x-wx-openid': 'oJRpR55tbI6Q6XSLAFx5umlXuB-o',
+        'x-wx-source': 'wx_web_internet_cloudrun_debug'
     }
     response = post(url, headers=headers, json=data).json()
     if response["errcode"] == 40037:
