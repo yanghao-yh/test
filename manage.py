@@ -238,7 +238,8 @@ if __name__ == '__main__':
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
                       'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
     }
-    # userTest = get(url, headers=headers)
+    userTest = get(url, headers=headers)
+    print(userTest)
     # users = userTest.json()['data']["openid"]
     # 接收的用户
     users = config["user"]
