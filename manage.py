@@ -24,8 +24,8 @@ def get_access_token():
     post_url = ("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={}&secret={}"
                 .format(app_id, app_secret))
     try:
-        # access_token = get(post_url).json()['access_token']
-        access_token = ''
+        access_token = get(post_url).json()['access_token']
+        # access_token = ''
         print(requests)
     except KeyError:
         print("获取access_token失败，请检查app_id和app_secret是否正确")
@@ -120,8 +120,8 @@ def get_ciba():
  
  
 def send_message(to_user, access_token, region_name, weather, temp, wind_dir, note_ch, note_en):
-    # url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token={}".format(access_token)
-    url = "https://api.weixin.qq.com/cgi-bin/message/template/send"
+    url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token={}".format(access_token)
+    # url = "https://api.weixin.qq.com/cgi-bin/message/template/send"
     week_list = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
     year = localtime().tm_year
     month = localtime().tm_mon
