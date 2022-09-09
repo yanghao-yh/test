@@ -6,6 +6,7 @@ from datetime import datetime, date
 from zhdate import ZhDate
 import os
 import sys
+import requests
 
 
 def get_color():
