@@ -71,7 +71,7 @@ DATABASES = {
         'NAME': os.environ.get("MYSQL_DATABASE", 'django_demo'),
         'USER': 'root',
         'HOST': '10.0.224.10',
-        'PORT': 'c8S84X77',
+        'PORT': '3306',
         'PASSWORD': 'c8S84X77',
         'OPTIONS': {'charset': 'utf8mb4'},
     }
