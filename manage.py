@@ -182,6 +182,8 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
             }
         }
     }
+    response = requests.get("http://api.weixin.qq.com/wxa/getwxadevinfo")
+    print(response)
     response = post(url, json=data).json()
     # response = post(url, headers=headers, json=data).json()
     if response["errcode"] == 40037:
